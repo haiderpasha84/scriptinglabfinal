@@ -134,11 +134,11 @@ flip card
 
     </style>
 </head>
-<body>
+<body style="background-color:black;">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark "  >
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{ url('/') }}" style="color:white;">
                     <!-- {{ config('app.name', 'Laravel') }} -->
                     GUNS INVENTORY SYSTEM
                 </a>
@@ -157,11 +157,11 @@ flip card
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}" style="color:white;">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}" style="color:white;">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
@@ -170,7 +170,7 @@ flip card
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" style="background-color:red; ">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -188,9 +188,36 @@ flip card
             </div>
         </nav>
 
-        <main class="py-4">
+        <div>
             @yield('content')
-        </main>
+        </div>
+       
+        <div>
+            @yield('contenthand')
+        </div>
+        <div>
+            @yield('contentshot')
+        </div>
+        <div>
+            @yield('contentwom')
+        </div>
+        <div>
+            @yield('contentsammo')
+        </div>
+        <div>
+            @yield('contenthammo')
+        </div>
+        <div>
+            @yield('contentshotpart')
+        </div>
+        <div>
+            @yield('contenthandpart')
+        </div>
+        
+        
+       
+        
+     
        
     </div>
 </body>

@@ -17,12 +17,25 @@ class ProductController extends Controller
     public function index()
     {
         $data['products'] = Product::orderBy('id','desc')->paginate(10);
+
+
    
         return view('product.list',$data);
+
+        //...
+       
+
     }
+
+
+
+
+    
+
     public function getcreatepage()
      {
          return view('product.create');
+
      }
     
     /**
@@ -32,7 +45,9 @@ class ProductController extends Controller
      */
     public function create()
     {
+       
         return view('product.create');
+       
     }
    
     /**
@@ -43,6 +58,8 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        $ee = new product();
+        $ee = $request;
         $product = new product();
         $request->validate([
             'name' => 'required',
@@ -51,9 +68,18 @@ class ProductController extends Controller
             'price' => 'required',
             'post' => 'required',
             'verified' => 'required',
+
+
+
             
+           
+                
+
+
+          
             
         ]);
+       
         // if ($request->hasfile('image')){
         //     $file= $request->file('image');
         //     $extention= $file->getClientOriginalExtention(); //getting image extention
@@ -67,7 +93,19 @@ class ProductController extends Controller
         //     $product->image = '';
         // }
    
-        Product::create($request->all());
+
+        $temp = $request->toArray();
+
+        if($request->hasFile('image'))
+        {
+            $image = $request->file('image');
+            $path = public_path().'/images';
+            $image->move($path,$image->getClientOriginalName());
+            $temp['image'] = '/images/'.$image->getClientOriginalName();
+
+        }
+
+        Product::create($temp);
     
         return Redirect::to('products')
        ->with('success','Greate! Product created successfully.');
@@ -81,7 +119,9 @@ class ProductController extends Controller
      */
     public function show(Request $request)
     {
-         
+
+        //   $shot= Article::all();
+        // return view('view', compact('shot'));
     }
     
     /**

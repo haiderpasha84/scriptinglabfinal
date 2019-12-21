@@ -12,11 +12,11 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
+              
+                
                 font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
+            
+                height: 130vh;
                 margin: 0;
             }
 
@@ -42,17 +42,18 @@
 
             .content {
                 text-align: center;
+            
             }
 
             .title {
-                font-size: 84px;
+                font-size: 60px;
             }
 
             .links > a {
-                color: #636b6f;
+                
                 padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
+                font-size: 20px;
+                font-weight: 800;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
@@ -60,20 +61,23 @@
 
             .m-b-md {
                 margin-bottom: 30px;
+                color:red;
+                font-weight:1000;
+                font-size:85;
             }
         </style>
     </head>
-    <body>
-        <div class="flex-center position-ref full-height">
+    <body style="background-color:black">
+        <div class="flex-center position-ref full-height" >
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}" style="color:white">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}" style="color:white">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}" style="color:white">Register</a>
                         @endif
                     @endauth
                 </div>

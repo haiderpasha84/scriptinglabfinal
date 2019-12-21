@@ -1,10 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-
+<style>
+a:hover {
+  background-color: red;
+  border-radius:5px;
+}
+</style>
 
 <!-- navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark  bg-dark">
      <div class=" offset-sm-1 col-sm-3">
      <a class="navbar-brand" href="{{url('/home')}}"> <img class="card-img-top" src="images/logoo.png" alt="Card image cap" style="height: 50px;"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,8 +29,8 @@
              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Guns
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{{url('/shotgun')}}">Shot Guns</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color:red; ">
+                <a class="dropdown-item" href="{{url('/shotgun')}}" >Shot Guns</a>
                 <a class="dropdown-item" href="{{url('/handgun')}}">Hand Guns</a>
                 <a class="dropdown-item" href="{{url('/womengun')}}">Women's Guns</a>
                 <div class="dropdown-divider"></div>
@@ -37,7 +42,7 @@
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Ammo
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color:red;">
                 <a class="dropdown-item" href="{{url('/shotammo')}}">Shot Gun Ammo</a>
                 <a class="dropdown-item" href="{{url('/handammo')}}">Hand Gun Ammo</a>
                 <div class="dropdown-divider"></div>
@@ -49,7 +54,7 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Parts
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color:red;">
                   <a class="dropdown-item" href="{{url('/handpart')}}">Hand Guns Parts</a>
                   <a class="dropdown-item" href="{{url('/shotgunpart')}}">Shot Guns Parts</a>
                   <div class="dropdown-divider"></div>
@@ -142,8 +147,10 @@
     <div class="row ">
       <div class="col-md-4">
         <div class="con mt-4">
+        <div class="card" style="border: 2px solid red; border-radius:5px 5px 5px 5px">
           <!-- Card -->
 <div class="card bg-dark text-white">
+
   <!-- Card image -->
   <div class="view overlay">
     <img class="card-img-top" src="/images/hand.jpg" alt="Card image cap">
@@ -167,6 +174,7 @@
 
   </div>
 </div>
+</div>
 <!-- Card -->
         </div>
       </div>
@@ -174,6 +182,7 @@
       <!-- second -->
       <div class="col-md-4">
         <div class="con mt-4">
+        <div class="card" style="border: 2px solid red; border-radius:5px 5px 5px 5px">
                    <!-- Card -->
 <div class="card bg-dark text-white">
   <!-- Card image -->
@@ -201,6 +210,7 @@
 </div>
         </div>
       </div>
+      </div>
       <!-- end second -->
 
       
@@ -208,6 +218,7 @@
       <div class="col-md-4">
         <div class="con mt-4">
           <!-- Card -->
+          <div class="card" style="border: 2px solid red; border-radius:5px 5px 5px 5px">
 <div class="card bg-dark text-white">
   <!-- Card image -->
   <div class="view overlay">
@@ -220,7 +231,7 @@
   
 
   <!-- Card content -->
-  <div class="card-body">
+  <div class="card-body" >
 
     <!-- Title -->
     <h4 class="card-title">Women's Guns</h4>
@@ -239,11 +250,15 @@
     </div>
   </div>
 </div>
+</div>
 <!-- gun link end -->
+
+
 <!-- latest gun -->
+
 <div class="container-fluid lc">
-<div class="container text-white text-center ">
-<img src="images/l3.jpg" class="aa" alt="" style="height:500px">
+<div class="container text-white text-center " >
+<img src="images/l3.jpg" class="aa" alt="" style="height:500px;border: 2px solid red; border-radius:25px 25px 25px 25px" >
 
  <h1><b>Steyr AUG. Assault Rifle</b></h1>
  
@@ -252,6 +267,11 @@
 </div>
 </div>
 <!-- end latest gun -->
+<br>
+<br>
+<br>
+<br>
+
 <!-- team title -->
                     <div class="container bg-gray text-center pt-5">
                       <h3><b>TEAM MEMBER's</b></h3>
@@ -263,14 +283,14 @@
     <div class="row">
       <div class="col-md-4">
         <div class="con mt-4 ">
-            <div class="card card-flip h-100 aa bg-dark rounded-circle">
+            <div class="card card-flip h-100 aa bg-dark rounded-circle"  style="border: 2px solid red; ">
                 <div class="card-front text-white ">
                     
                         
-                       <img src="images/profile.jpeg" class="aa rounded-circle" alt="">
+                       <img src="images/profile.jpeg" class="aa rounded-circle" alt="" >
                    
                 </div>
-                <div class="card-back bg-dark text-white aa rounded-circle">
+                <div class="card-back bg-dark text-white aa rounded-circle"  style="border: 2px solid red; ">
                     <div class="card-body text-center mt-5">
                        <h3>Haider Hassan Pasha</h3>
                        <p>Front-end Developer</p>
@@ -284,14 +304,14 @@
 
       <div class="col-md-4">
           <div class="con mt-4">
-              <div class="card card-flip h-100 aa bg-dark rounded-circle">
+              <div class="card card-flip h-100 aa bg-dark rounded-circle"  style="border: 2px solid red; ">
                   <div class="card-front text-white ">
                       
                           
                          <img src="images/profile.jpeg" class="aa rounded-circle" alt="">
                      
                   </div>
-                  <div class="card-back bg-dark text-white aa rounded-circle">
+                  <div class="card-back bg-dark text-white aa rounded-circle"  style="border: 2px solid red; ">
                       <div class="card-body text-center mt-5">
                          <h3>ROHAIL ALI</h3>
                          <p>Backhand developer</p>
@@ -306,17 +326,17 @@
       <!-- third member -->
       <div class="col-md-4">
           <div class="con mt-4">
-              <div class="card card-flip h-100 aa bg-dark rounded-circle">
+              <div class="card card-flip h-100 aa bg-dark rounded-circle"  style="border: 2px solid red; ">
                   <div class="card-front text-white ">
                       
                           
                          <img src="images/profile.jpeg" class="aa rounded-circle" alt="">
                      
                   </div>
-                  <div class="card-back bg-dark text-white aa rounded-circle">
+                  <div class="card-back bg-dark text-white aa rounded-circle"  style="border: 2px solid red; ">
                       <div class="card-body text-center mt-5">
                          <h3>JAWAD ARSHAD</h3>
-                         <p>Random Developer</p>
+                         <p>Developer</p>
                          <i class="fas-fa-facebook" style="color: white;"></i> 
                       </div>
                   </div>
@@ -349,7 +369,7 @@
 
 
 <!-- footer -->
-<footer class="page-footer font-small bg-dark text-white pt-4">
+<footer class="page-footer font-small bg-dark text-white pt-4" >
 
     <!-- Footer Links -->
     <div class="container text-center text-md-left">
@@ -359,8 +379,8 @@
   
         <!-- Grid column -->
         <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-          <h6 class="text-uppercase mb-4 font-weight-bold">Company name</h6>
-          <p>Our company description.</p>
+          <h6 class="text-uppercase mb-4 font-weight-bold">Weapon Masters</h6>
+          <p>We deal with all sorts of weapons, ranging from low tier to high tier accessible to locals and big companies that hold a licence to guns, we also deal with women guns as for defence purposes. </p>
         </div>
         <!-- Grid column -->
   
@@ -375,13 +395,13 @@
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
           <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
           <p>
-            <i class="fas fa-home mr-3"></i> Rawalpindi , .... , Pakistan</p>
+            <i class="fas fa-home mr-3"></i> Rawalpindi, Pakistan</p>
           <p>
-            <i class="fas fa-envelope mr-3"></i> Haiderpasha84@gmail.com</p>
+            <i class="fas fa-envelope mr-3"></i> weaponsmaster@gmail.com</p>
           <p>
             <i class="fas fa-phone mr-3"></i> 0320 5586329</p>
           <p>
-            <i class="fas fa-print mr-3"></i> Rohail's number</p>
+            <i class="fas fa-print mr-3"></i> 0312 5686446</p>
         </div>
         <!-- Grid column -->
   
@@ -399,7 +419,7 @@
           <!--Copyright-->
           <p class="text-center text-md-left">© 2018 Copyright:
             <a href="https://mdbootstrap.com/education/bootstrap/" style="color: white">
-              <strong> companyname.com</strong>
+              <strong> weaponmaster.com</strong>
             </a>
           </p>
   

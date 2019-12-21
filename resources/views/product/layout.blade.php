@@ -9,10 +9,10 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <style>
     body{
-    background-color: #953737;
+    background-color: black;
     }
     .container{
-    background: #370D0D;
+    background: #202020;
     padding: 4%;
     border-top-left-radius: 0.10rem;
     border-bottom-left-radius: 0.50rem;
